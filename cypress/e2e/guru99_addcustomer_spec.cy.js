@@ -20,6 +20,7 @@ describe("Guru99 Add Customer Test", () => {
     cy.get('input[name="emailid"]').type("alice.smith7722@example.com");
     cy.get('input[name="password"]').type("654321");
     cy.get('input[type="submit"]').click();
+    cy.wait(5000);
     Cypress.on("uncaught:exception", (err, runnable) => {
       return false;
     });
